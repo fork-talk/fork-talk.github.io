@@ -24,110 +24,173 @@
   <meta name="twitter:image" content="https://fork-talk.github.io/og-image.png">
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍴</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
 
-    <header>
-      <img src="logo.png" alt="Fork Talk" class="logo">
-      <h1>Fork Talk</h1>
-      <p class="tagline">Open source Bitcoin fork research</p>
-    </header>
-
-    <div class="divider"></div>
-
-    <section class="hero">
-      <p>Data-driven analysis of Bitcoin forks, proposals, and governance. No opinion without evidence. No claim without a source.</p>
-      <p>Community maintained. <a href="https://github.com/fork-talk">Corrections welcome via PR.</a></p>
-    </section>
-
-    <div class="divider"></div>
-
-    <section class="projects">
-      <h2>Projects</h2>
-
-      <a href="/faq/" class="project-card">
-        <div class="project-header">
-          <span class="project-name">faq</span>
-          <span class="project-arrow">&rarr;</span>
-        </div>
-        <p class="project-desc">Bitcoin Forks FAQ - what forks are, how they work, historical and current proposals, and data-driven responses to common talking points.</p>
-        <div class="project-tags">
-          <span class="tag">BIP-110</span>
-          <span class="tag">BIP-54</span>
-          <span class="tag">eCash</span>
-          <span class="tag">SegWit</span>
-          <span class="tag">Taproot</span>
-        </div>
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-logo" href="/">
+        <img src="logo.png" alt="" class="nav-mark">
+        <span>Fork Talk</span>
       </a>
+      <div class="nav-links">
+        <a href="/faq/">FAQ</a>
+        <a href="/bip110-monitor/">Monitor</a>
+        <a class="nav-gh" href="https://github.com/fork-talk">
+          <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </nav>
 
-      <a href="/bip110-monitor/" class="project-card">
-        <div class="project-header">
-          <span class="project-name">bip110-monitor</span>
-          <span class="project-arrow">&rarr;</span>
-        </div>
-        <p class="project-desc">Live adoption dashboard tracking BIP-110 node signaling and miner block signaling across the Bitcoin network.</p>
-        <div class="project-tags">
-          <span class="tag">live data</span>
-          <span class="tag">node tracking</span>
-          <span class="tag">block signaling</span>
-          <span class="tag">ES modules</span>
-        </div>
-      </a>
-    </section>
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow"><span class="dot"></span> Open source Bitcoin research</div>
+      <h1>Data-driven analysis of Bitcoin <em>forks</em></h1>
+      <p class="sub">No opinion without evidence. No claim without a source. Community maintained, corrections welcome via PR.</p>
+    </div>
+  </section>
 
-    <div class="divider"></div>
+  <section class="alt">
+    <div class="wrap">
+      <div class="sec-head center">
+        <div class="kicker">Projects</div>
+        <h2>What we build</h2>
+      </div>
+      <div class="card-grid">
 
-    <section class="principles">
-      <h2>Principles</h2>
+        <a href="/faq/" class="card reveal">
+          <div class="card-top">
+            <span class="card-icon">📖</span>
+            <span class="card-name">faq</span>
+          </div>
+          <h3>Bitcoin Forks FAQ</h3>
+          <p>What forks are, how they work, historical and current proposals, and data-driven responses to common talking points.</p>
+          <div class="card-tags">
+            <span class="tag">BIP-110</span>
+            <span class="tag">BIP-54</span>
+            <span class="tag">eCash</span>
+            <span class="tag">SegWit</span>
+            <span class="tag">Taproot</span>
+          </div>
+          <span class="card-link">Read the FAQ <span class="arr">&rarr;</span></span>
+        </a>
+
+        <a href="/bip110-monitor/" class="card reveal">
+          <div class="card-top">
+            <span class="card-icon">📊</span>
+            <span class="card-name">bip110-monitor</span>
+          </div>
+          <h3>Adoption Dashboard</h3>
+          <p>Live tracking of BIP-110 node signaling and miner block signaling across the Bitcoin network.</p>
+          <div class="card-tags">
+            <span class="tag">live data</span>
+            <span class="tag">node tracking</span>
+            <span class="tag">block signaling</span>
+            <span class="tag">ES modules</span>
+          </div>
+          <span class="card-link">View dashboard <span class="arr">&rarr;</span></span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head center">
+        <div class="kicker">Principles</div>
+        <h2>How we work</h2>
+      </div>
       <div class="principle-grid">
-        <div class="principle">
-          <div class="principle-title">Evidence first</div>
-          <div class="principle-body">Every claim links to data. Simulations, chain analysis, on-chain metrics. If it can't be measured, it doesn't belong here.</div>
+        <div class="principle reveal">
+          <div class="principle-icon">🔬</div>
+          <h3>Evidence first</h3>
+          <p>Every claim links to data. Simulations, chain analysis, on-chain metrics. If it can't be measured, it doesn't belong here.</p>
         </div>
-        <div class="principle">
-          <div class="principle-title">Pro-Bitcoin</div>
-          <div class="principle-body">This is a Bitcoin project. We care about the network's health, security, and function as peer-to-peer electronic cash.</div>
+        <div class="principle reveal">
+          <div class="principle-icon">₿</div>
+          <h3>Pro-Bitcoin</h3>
+          <p>This is a Bitcoin project. We care about the network's health, security, and function as peer-to-peer electronic cash.</p>
         </div>
-        <div class="principle">
-          <div class="principle-title">Neutral on proposals</div>
-          <div class="principle-body">We present what proposals do, how they work, and what the data shows. We strip away bias and gaslighting - from any direction.</div>
+        <div class="principle reveal">
+          <div class="principle-icon">⚖️</div>
+          <h3>Neutral on proposals</h3>
+          <p>We present what proposals do, how they work, and what the data shows. We strip away bias and gaslighting - from any direction.</p>
         </div>
-        <div class="principle">
-          <div class="principle-title">Open source</div>
-          <div class="principle-body">Everything is MIT licensed, hosted on GitHub Pages, no build steps. Fork it, fix it, improve it.</div>
+        <div class="principle reveal">
+          <div class="principle-icon">🔓</div>
+          <h3>Open source</h3>
+          <p>Everything is MIT licensed, hosted on GitHub Pages, no build steps. Fork it, fix it, improve it.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <div class="divider"></div>
-
-    <section class="quick-links">
-      <h2>Quick links</h2>
-      <div class="link-list">
-        <a href="/faq/forks/bip-110.html">BIP-110 - Temporary Data Reduction</a>
-        <a href="/faq/forks/bip-54.html">BIP-54 - Great Consensus Cleanup</a>
-        <a href="/faq/talking-points.html">Common Talking Points (rebuttals)</a>
-        <a href="/faq/general-faq.html">General FAQ</a>
-        <a href="/bip110-monitor/">BIP-110 Adoption Dashboard</a>
+  <section class="alt">
+    <div class="wrap">
+      <div class="sec-head center">
+        <div class="kicker">Explore</div>
+        <h2>Quick links</h2>
       </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <section class="contribute">
-      <h2>Contribute</h2>
-      <p>Fork Talk is a living document. If something is wrong, open an issue. If something is missing, submit a PR. The best contributions are data, not opinion.</p>
-      <div class="link-list">
-        <a href="https://github.com/fork-talk">github.com/fork-talk</a>
+      <div class="link-grid">
+        <a href="/faq/forks/bip-110.html" class="qlink reveal">
+          <span class="qlink-label">BIP-110</span>
+          <span class="qlink-desc">Temporary Data Reduction</span>
+          <span class="arr">&rarr;</span>
+        </a>
+        <a href="/faq/forks/bip-54.html" class="qlink reveal">
+          <span class="qlink-label">BIP-54</span>
+          <span class="qlink-desc">Great Consensus Cleanup</span>
+          <span class="arr">&rarr;</span>
+        </a>
+        <a href="/faq/talking-points.html" class="qlink reveal">
+          <span class="qlink-label">Talking Points</span>
+          <span class="qlink-desc">Data-driven rebuttals</span>
+          <span class="arr">&rarr;</span>
+        </a>
+        <a href="/faq/general-faq.html" class="qlink reveal">
+          <span class="qlink-label">General FAQ</span>
+          <span class="qlink-desc">Governance and terminology</span>
+          <span class="arr">&rarr;</span>
+        </a>
+        <a href="/bip110-monitor/" class="qlink reveal">
+          <span class="qlink-label">Live Monitor</span>
+          <span class="qlink-desc">BIP-110 adoption dashboard</span>
+          <span class="arr">&rarr;</span>
+        </a>
+        <a href="https://github.com/fork-talk" class="qlink reveal">
+          <span class="qlink-label">GitHub</span>
+          <span class="qlink-desc">Source code and contributions</span>
+          <span class="arr">&rarr;</span>
+        </a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer>
+  <section class="cta">
+    <div class="wrap" style="text-align:center">
+      <h2>Fork Talk is a <em>living document</em></h2>
+      <p class="sub">If something is wrong, open an issue. If something is missing, submit a PR. The best contributions are data, not opinion.</p>
+      <a class="cta-btn" href="https://github.com/fork-talk">Contribute on GitHub <span class="arr">&rarr;</span></a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
       <p>Community effort. Does not represent any individual or organization. MIT License.</p>
-    </footer>
+    </div>
+  </footer>
 
-  </div>
+  <script>
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  </script>
+
 </body>
 </html>

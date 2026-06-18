@@ -1,0 +1,231 @@
+:root {
+  --bg: #0d0d0d;
+  --surface: #161616;
+  --border: #2a2a2a;
+  --text: #e0e0e0;
+  --text-muted: #888;
+  --accent: #f7931a;
+  --accent-dim: rgba(247, 147, 26, 0.1);
+  --link: #f7931a;
+  --mono: 'SF Mono', 'Fira Code', 'Fira Mono', Menlo, Consolas, monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 60px 24px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.logo {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 16px;
+}
+
+header h1 {
+  font-size: 2.4em;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+
+.tagline {
+  color: var(--text-muted);
+  font-size: 1.1em;
+  font-family: var(--mono);
+}
+
+/* Dividers */
+.divider {
+  border-top: 1px solid var(--border);
+  margin: 32px 0;
+}
+
+/* Hero */
+.hero p {
+  font-size: 1.05em;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.hero a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+.hero a:hover {
+  text-decoration: underline;
+}
+
+/* Section headings */
+h2 {
+  font-size: 0.8em;
+  font-family: var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+/* Project cards */
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project-card {
+  display: block;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px 24px;
+  text-decoration: none;
+  color: var(--text);
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.project-card:hover {
+  border-color: var(--accent);
+  background: var(--accent-dim);
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.project-name {
+  font-family: var(--mono);
+  font-size: 1.15em;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.project-arrow {
+  font-size: 1.2em;
+  color: var(--text-muted);
+  transition: transform 0.2s;
+}
+
+.project-card:hover .project-arrow {
+  transform: translateX(4px);
+  color: var(--accent);
+}
+
+.project-desc {
+  color: var(--text-muted);
+  font-size: 0.9em;
+  margin-bottom: 12px;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  font-family: var(--mono);
+  font-size: 0.7em;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--accent-dim);
+  color: var(--accent);
+  border: 1px solid rgba(247, 147, 26, 0.2);
+}
+
+/* Principles */
+.principle-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.principle {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px 20px;
+}
+
+.principle-title {
+  font-family: var(--mono);
+  font-weight: 600;
+  font-size: 0.9em;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+.principle-body {
+  font-size: 0.85em;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Link lists */
+.link-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.link-list a {
+  font-family: var(--mono);
+  font-size: 0.9em;
+  color: var(--accent);
+  text-decoration: none;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+  transition: padding-left 0.15s;
+}
+
+.link-list a:hover {
+  padding-left: 8px;
+}
+
+.link-list a:last-child {
+  border-bottom: none;
+}
+
+/* Contribute */
+.contribute p {
+  color: var(--text-muted);
+  font-size: 0.95em;
+  margin-bottom: 12px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding-top: 32px;
+  color: var(--text-muted);
+  font-size: 0.8em;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .container { padding: 32px 16px; }
+  header h1 { font-size: 1.8em; }
+  .logo { width: 80px; height: 80px; }
+  .principle-grid { grid-template-columns: 1fr; }
+  .project-card { padding: 16px; }
+}
